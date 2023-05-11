@@ -1,26 +1,41 @@
-import logo from "./logo.svg";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Tutorial from "./components/tutorial";
+import AddTutorial from "./components/add-tutorial";
+import TutorialList from "./components/tutorials-list.";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container mt-3">
+        <nav className="navbar navbar-expand navbar-dark bg-dark">
+          <Link to={"/tutorials"} className="navbar-brand">
+            MyApp
+          </Link>
+          <div className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <Link to={"/tutorials"} className="nav-link">
+                Tutorials
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to={"/add"} className="nav-link">
+                Add
+              </Link>
+            </li>
+          </div>
+        </nav>
+
+        <Switch>
+          <Route exact path={["/", "/tutorials"]} component={TutorialList} />
+          <Route exact path="/add" component={AddTutorial} />
+          <Route path="/tutorials/:id" component={Tutorial} />
+        </Switch>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
