@@ -4,7 +4,7 @@ const getAll = () => {
   return http.get("/tutorials");
 };
 
-const get = (id) => {
+const getById = (id) => {
   return http.get(`/tutorials/${id}`);
 };
 
@@ -30,7 +30,7 @@ const findByTitle = (title) => {
 
 const TutorialService = {
   getAll,
-  get,
+  getById,
   create,
   update,
   remove,
