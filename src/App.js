@@ -27,7 +27,6 @@ const App = () => {
             </li>
           </div>
         </nav>
-
         <Switch>
           <Route exact path={["/", "/tutorials"]} component={TutorialList} />
           <Route exact path="/add" component={AddTutorial} />
