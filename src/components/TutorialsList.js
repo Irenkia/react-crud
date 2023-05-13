@@ -7,7 +7,7 @@ import {
 } from "../store/tutorials/actions-creators";
 import { Link } from "react-router-dom";
 
-const Tutorial = () => {
+const TutorialsList = () => {
   const [currentTutorial, setCurrentTutorial] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [searchTitle, setSearchTitle] = useState("");
@@ -24,7 +24,7 @@ const Tutorial = () => {
     setSearchTitle(searchTitle);
   };
 
-  const refreshData = () => {
+  const getData = () => {
     setCurrentTutorial(null);
     setCurrentIndex(-1);
   };
@@ -38,7 +38,7 @@ const Tutorial = () => {
     dispatch(deleteAllTutorials())
       .then((response) => {
         console.log(response);
-        refreshData();
+        getData();
       })
       .catch((e) => {
         console.log(e);
@@ -46,7 +46,7 @@ const Tutorial = () => {
   };
 
   const findByTitle = () => {
-    refreshData();
+    getData();
     dispatch(findTutorialsByTitle(searchTitle));
   };
 
@@ -138,4 +138,4 @@ const Tutorial = () => {
   );
 };
 
-export default Tutorial;
+export default TutorialsList;
