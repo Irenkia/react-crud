@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Router>
       <div className="container mt-3">
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
+        <nav className="navbar navbar-expand navbar-dark bg-dark  mb-3">
           <Link to={"/tutorials"} className="navbar-brand">
             MyApp
           </Link>
