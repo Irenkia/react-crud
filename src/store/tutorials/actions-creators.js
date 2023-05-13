@@ -5,7 +5,7 @@ import {
   DELETE_TUTORIAL,
   DELETE_ALL_TUTORIALS,
 } from "./types";
-import TutorialService from "../../services/tutorial-service";
+import TutorialService from "../../services/TutorialService";
 
 export const createTutorial = (title, description) => async (dispatch) => {
   try {
