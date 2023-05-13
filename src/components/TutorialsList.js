@@ -1,7 +1,7 @@
 import React from "react";
 
-const TutorialsList = () => {
-  return <div>TutorialsLis</div>;
+const Tutorial = () => {
+  return <div>Tutorial</div>;
 };
 
-export default TutorialsList;
+export default Tutorial;
