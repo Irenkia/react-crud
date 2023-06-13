@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Tutorial from "./components/Tutorial";
+import Tutorial from "./components/tutorial";
 import AddTutorial from "./components/AddTutorial";
 import TutorialsList from "./components/TutorialsList";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Router>
       <div className="container mt-3">
-        <nav className="navbar navbar-expand navbar-dark bg-dark  mb-3">
+        <nav className="navbar navbar-expand navbar-dark bg-secondary mb-3">
           <Link to={"/tutorials"} className="navbar-brand">
             MyApp
           </Link>
